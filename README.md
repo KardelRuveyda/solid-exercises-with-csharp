@@ -5,7 +5,7 @@
 ### Single Responsibility Prensibi
 -  Bir şeyi yapabiliyor olmamız her şeyi yapmamız gerektiği anlamına gelmemektedir. Metot yazarken de bu yaklaşımla ilerlemeliyiz. Bir metotun bir sorumluluğu olsun sadece bir iş yapsın mantığında ilerlemek gün sonunda daha doğru olabilir. 
 - "Single Responsibility Principle" (SRP), yazılım geliştirme alanında SOLID prensiplerinden biridir. SOLID prensipleri, yazılım tasarımındaki temel prensipleri düzenler ve sürdürülebilir, esnek ve bakımı kolay sistemler oluşturmayı amaçlar. Single Responsibility Principle (Tek Sorumluluk Prensibi), Robert C. Martin'in belirttiği beş SOLID prensibinden biridir. Bu prensip, bir sınıfın yalnızca bir nedenle değişebileceğini ve bir sınıfın sorumluluklarının tek bir konsepte odaklanması gerektiğini savunur. Bu, bir sınıfın sadece bir tür görevi veya sorumluluğu olması gerektiği anlamına gelir. İdeali, bir sınıfın değişiklik nedeni sadece bir tane olmalıdır. Eğer bir sınıf birden fazla sorumluluğu üstlenirse, bu sınıfın herhangi bir sorumluluğundaki bir değişiklik diğer sorumlulukları etkileyebilir ve bu da kodun karmaşıklığını ve bakım zorluğunu artırabilir.
-
+  
 **SRP'nin avantajları şunlar olabilir:**
 
 **1. Daha İyi Bakım ve Anlaşılabilirlik:** Sınıfların tek bir sorumluluğa odaklanması, kodun daha anlaşılabilir ve bakımı daha kolay olmasını sağlar. Bu sayede, bir sınıfın içindeki değişikliklerin diğer kısımları etkileme olasılığı azalır.
@@ -14,9 +14,15 @@
 
 Örneğin, bir sınıfın hem veritabanı işlemlerini yönetmesi hem de kullanıcı arayüzü işlemlerini gerçekleştirmesi durumunda, bu sınıf SRP'ye uymuyor demektir. İdeal olarak, bu sorumluluklar iki ayrı sınıfa ayrılmalıdır.
 
+
+![Resim 1](https://github.com/KardelRuveyda/dotnet-yuzuncuyil-egitim-notlari/assets/33912144/e4ea7f32-5b1d-4e67-af51-933074f13f7c) | ![Resim 2](https://github.com/KardelRuveyda/dotnet-yuzuncuyil-egitim-notlari/assets/33912144/f540793c-b2f4-4435-8a9f-2235212116b5)
+:-------------------------:|:-------------------------:
+Single Responsibility              | Robert C. Martin
+
+
 ### Open Closed Prensibi
 - Yazdığımız kodların geliştirmeye açık olmalıdır ancak değişime kapalı olmalıdır. 
-- "Open/Closed Principle" (OCP), SOLID prensiplerinden biridir ve yazılım tasarımındaki iyi bir uygulama pratiğini temsil eder. Bu prensip, Bertrand Meyer tarafından ortaya atılmıştır ve yazılım tasarımında esneklik ve genişletilebilirlik sağlamayı amaçlar.
+- "Open/Closed Principle" (OCP), SOLID prensiplerinden biridir ve yazılım tasarımındaki iyi bir uygulama pratiğini temsil eder. Bu prensip, **Bertrand Meyer** tarafından ortaya atılmıştır ve yazılım tasarımında esneklik ve genişletilebilirlik sağlamayı amaçlar.
 - Open/Closed Principle (Açık/Kapalı Prensibi), şu şekilde ifade edilir: **"Bir yazılım birimi (sınıf, modül, fonksiyon, vb.) genişletmeye açık, değişikliğe kapalı olmalıdır."** Bu ilkeye göre, bir yazılım birimi, yeni özellikler eklemek veya davranışını değiştirmek için açık olmalı, ancak mevcut davranışlarını değiştirmek için kapalı olmalıdır.
 - Bu prensip, yazılım birimlerinin (genellikle sınıfların) uzantılarına açık, ancak mevcut kodlarında yapılan değişikliklere kapalı olması gerektiğini savunur. Yani, yeni bir özellik eklemek veya davranışı değiştirmek, mevcut kodu değiştirmek yerine, var olan kodu uzatarak yapılmalıdır.
 
@@ -25,6 +31,9 @@
 **3. Daha Yüksek Uyum Sağlama:** OCP, birimlerin daha iyi bir şekilde uyum sağlamasını sağlar. Yeni özellikler eklemek, mevcut kodu değiştirmeksizin gerçekleştirilebileceği için, yazılım birimleri daha esnek ve yeniden kullanılabilir olabilir.
 
 OCP, diğer SOLID prensipleriyle birlikte kullanıldığında, daha modüler, sürdürülebilir ve esnek yazılım tasarımları elde etmeye yardımcı olabilir.
+![Resim 3](https://github.com/KardelRuveyda/dotnet-yuzuncuyil-egitim-notlari/assets/33912144/7939f24e-f1ab-4951-b506-99f21767d422) | ![Resim 4](https://github.com/KardelRuveyda/dotnet-yuzuncuyil-egitim-notlari/assets/33912144/30a69435-f63c-4760-bdc3-4ff2bb77c318)
+:-------------------------:|:-------------------------:
+Open Closed            | Bertrand Meyer
 
 ### Liskov Substitution Prensibi
 - Bu prensip bize der ki bir class inherit edildiği class gibi davranamıyorsa burada bir ihmal vardır. Abstraction ile ilgili yaptığımız bir sorun var demektir. 
@@ -37,9 +46,13 @@ OCP, diğer SOLID prensipleriyle birlikte kullanıldığında, daha modüler, s�
 
 LSP'nin bu kuralları, türetilmiş sınıfların kullanımının güvenli olmasını sağlar ve kodun daha öngörülebilir olmasına katkıda bulunur. Bu prensip, polymorphism (çok biçimlilik) konseptiyle de ilişkilidir. Eğer bir sınıf, bir üst sınıfın yerine geçebiliyorsa, bu durumda polymorphism kullanılabilir ve bu nesneleri bir arayüz üzerinden kullanmak daha kolay hale gelir. LSP'nin amacı, türetilmiş sınıfların kullanımını güvenli ve sorunsuz hale getirerek, yazılımın esnek ve sürdürülebilir olmasına katkıda bulunmaktır.
 
+![Resim 3](https://github.com/KardelRuveyda/dotnet-yuzuncuyil-egitim-notlari/assets/33912144/0f27941f-92d9-4da4-ab6e-d7ef18102652) | ![Resim 4](https://github.com/KardelRuveyda/dotnet-yuzuncuyil-egitim-notlari/assets/33912144/cf1a549e-62a5-4ee9-82a2-e2d876b53294)
+:-------------------------:|:-------------------------:
+Liskov Substitution             | Barbara Liskov
+
 ### Interface Segregation Prensibi
 
-Interface Segregation Principle" (ISP), SOLID prensiplerinden biridir ve arayüzlerin (interfaces) mümkünse mümkün olduğunca özel olması gerektiğini savunur. Bu prensip, bir sınıfın kullanmadığı metotlara sahip bir arayüzü uygulamamasını önerir ve müşterilerin yalnızca ihtiyaçları olan metotları içeren küçük arayüzleri kullanmalarını teşvik eder. ISP'nin temel prensibi şu şekildedir: "Bir sınıf, ihtiyaç duymadığı metotları içeren bir arayüzü uygulamamalıdır." Bu ilkeye göre, bir sınıf yalnızca kendi ihtiyaçlarına uygun olan metotları içeren arayüzleri uygulamalıdır. Böylece, bir sınıfın gereksinim duymadığı metotlarla bağlantılı olması ve bu metotları boş bir şekilde implemente etmesi önlenmiş olur.
+Interface Segregation Principle" (ISP), SOLID prensiplerinden biridir ve arayüzlerin (interfaces) mümkünse mümkün olduğunca özel olması gerektiğini savunur. Bu prensip, bir sınıfın kullanmadığı metotlara sahip bir arayüzü uygulamamasını önerir ve müşterilerin yalnızca ihtiyaçları olan metotları içeren küçük arayüzleri kullanmalarını teşvik eder. ISP'nin temel prensibi şu şekildedir: **"Bir sınıf, ihtiyaç duymadığı metotları içeren bir arayüzü uygulamamalıdır."** Bu ilkeye göre, bir sınıf yalnızca kendi ihtiyaçlarına uygun olan metotları içeren arayüzleri uygulamalıdır. Böylece, bir sınıfın gereksinim duymadığı metotlarla bağlantılı olması ve bu metotları boş bir şekilde implemente etmesi önlenmiş olur.
 
 **ISP'nin avantajları şunlar olabilir:**
 
@@ -50,6 +63,10 @@ Interface Segregation Principle" (ISP), SOLID prensiplerinden biridir ve arayüz
 **3- Kodu Anlama ve Kullanma Kolaylığı:** Müşteriler, yalnızca ihtiyaç duydukları metotlara sahip arayüzleri kullanarak kodu daha iyi anlayabilir ve kullanabilirler.
 
 Örneğin, bir arabayla ilgili bir arayüzde "Uçak Modu" gibi uygulanması gereksiz veya kullanılmayacak metotlar varsa, bu arayüzü implemente eden araba sınıfları için bu metotlar anlamsız olacaktır. Bu durum, ISP'nin ihlali olarak kabul edilebilir ve bu tür durumlar kaçınılmalıdır. Sınıflar, ihtiyaçlarına uygun ve anlamlı metotları içeren arayüzleri uygulayarak bu prensibi takip etmelidir.
+
+![Resim 3](https://github.com/KardelRuveyda/dotnet-yuzuncuyil-egitim-notlari/assets/33912144/af1bfe69-7e93-4bb6-8a13-597e8e9438f4) | ![Resim 4](https://github.com/KardelRuveyda/dotnet-yuzuncuyil-egitim-notlari/assets/33912144/5a823a2a-6acf-4393-8661-16eac1c030d8)
+:-------------------------:|:-------------------------:
+Interface Segregation        | Interface Segregation
 
 ### Dependency Inversion Prensibi
 
@@ -69,3 +86,7 @@ Interface Segregation Principle" (ISP), SOLID prensiplerinden biridir ve arayüz
 
 - Yüksek seviyeli modüller ve düşük seviyeli modüller, her ikisi de soyutlamalara bağımlı olduklarından, değişiklikler bir modülde yapıldığında diğerini etkilemez.
 - Bu prensip, kodun değişikliklere daha dayanıklı, esnek ve sürdürülebilir olmasını sağlar.
+
+![Resim 3](https://github.com/KardelRuveyda/dotnet-yuzuncuyil-egitim-notlari/assets/33912144/b9bc6939-c6e4-42cd-80ce-c97e0b730ff3)
+:-------------------------:
+Dependency Inversion         
