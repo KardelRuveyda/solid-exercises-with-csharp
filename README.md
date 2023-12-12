@@ -70,7 +70,7 @@ Interface Segregation        | Interface Segregation
 
 ### Dependency Inversion Prensibi
 
-- Daha üst seviyede bir class alt seviyedeki bir classa bağımlı olmamalı. Çünkü bu bağımlılıkların sayısı arttıkça bunlardan kurtulma  olasığımız azabilir ve karmaşıklığa yol açılabilir. Dependency Inversion prensibi, SOLID prensiplerinden biridir ve yazılım tasarımında kodun esnekliğini ve sürdürülebilirliğini artırmayı amaçlar. Dependency Inversion prensibi, yüksek seviyeli modüllerin düşük seviyeli modüllere bağımlı olmamalıdır. İki modül de soyutlamalara bağlı olmalıdır.
+- Daha üst seviyede bir class alt seviyedeki bir classa bağımlı olmamalı. Çünkü bu bağımlılıkların sayısı arttıkça bunlardan kurtulma  olasığımız azalabilir ve karmaşıklığa yol açılabilir. Dependency Inversion prensibi, SOLID prensiplerinden biridir ve yazılım tasarımında kodun esnekliğini ve sürdürülebilirliğini artırmayı amaçlar. Dependency Inversion prensibi, yüksek seviyeli modüllerin düşük seviyeli modüllere bağımlı olmamalıdır. İki modül de soyutlamalara bağlı olmalıdır.
 
 **Dependency Inversion prensibi üç ana ilkeye dayanır:**
 
